@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-out;
+    user-select: none;
+    transform-style: preserve-3d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+}
+
+.container {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    padding: 0 2rem;
+    width: 60%;
+    border-radius: 30px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2), 0 0 4rem rgba(0, 0, 0, 0.2);
+}
+
+.sneaker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sneaker::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.sneaker img {
+    width: 20rem;
+    object-fit: cover;
+    z-index: 0;
+    margin: 5rem 0;
+    transition: all 0.5s ease-out;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sizes button {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 30px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.sizes button.active {
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+}
+
+.purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.purchase button {
+    width: 100%;
+    height: 3rem;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
